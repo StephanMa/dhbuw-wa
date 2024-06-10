@@ -280,7 +280,7 @@
         {
          "name":"script",
          "type":"string",
-         "value":"src\/main.ts"
+         "value":"public\/main.ts"
         }],
  "renderorder":"right-down",
  "tiledversion":"git",
