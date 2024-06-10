@@ -33,6 +33,10 @@ WA.onInit().then(() => {
     }).catch(e => console.error(e));
 
 
+    /**
+     * Dialogue code for entrance.tmj
+     */
+
     // Welcome-Popup
     let helloWorldPopup: Popup;
     // Open the popup when we enter a given zone
@@ -53,7 +57,6 @@ WA.onInit().then(() => {
     let nelkenwurz: Popup;
     // Open the popup when we enter a given zone
     WA.room.onEnterLayer("popupNelke").subscribe(() => {
-        //console.log("onEnter callback is running");
         nelkenwurz = WA.ui.openPopup(
             "nelkenwurz", 
             'Hm...Nelkenwurz...',
@@ -69,7 +72,6 @@ WA.onInit().then(() => {
   let pilz: Popup;
   // Open the popup when we enter a given zone
   WA.room.onEnterLayer("popupPilz").subscribe(() => {
-      //console.log("onEnter callback is running");
       pilz = WA.ui.openPopup(
           "pilz", 
           'Hm...\n ein Pilz...',
@@ -85,7 +87,6 @@ WA.onInit().then(() => {
   let apfel: Popup;
   // Open the popup when we enter a given zone
   WA.room.onEnterLayer("popupApfel").subscribe(() => {
-      //console.log("onEnter callback is running");
       apfel = WA.ui.openPopup(
           "apfel", 
           'crunch...munch...slurp...',
@@ -96,6 +97,103 @@ WA.onInit().then(() => {
   WA.room.onLeaveLayer("popupApfel").subscribe(() => {
       apfel.close();
   })
+
+  /**
+     * Dialogue code for courtroom.tmj
+     */
+    //panel 2
+    let wayFinderDialogue: Popup;
+    // Open the popup when we enter a given zone
+    WA.room.onEnterLayer("triggerWayfinder").subscribe(() => {
+        wayFinderDialogue = WA.ui.openPopup(
+            "panel2", 
+            '<- Stadt im Mittelalter \n Sexismus -> ',
+            []
+        );
+    });
+    // Close the popup when we leave the zone.
+    WA.room.onLeaveLayer("triggerWayfinder").subscribe(() => {
+        wayFinderDialogue.close();
+    })
+    
+    //panel 1
+    let triggerpanel1: Popup;
+    WA.room.onEnterLayer("triggerPanel1").subscribe(() => {
+        triggerpanel1 = WA.ui.openPopup(
+            "panel1",
+            '<- Panel 1',
+            []
+        );
+    });
+     // Close the popup when we leave the zone.
+     WA.room.onLeaveLayer("triggerPanel1").subscribe(() => {
+        triggerpanel1.close();
+    })
+
+    //panel 4
+    let triggerpanel4: Popup;
+    WA.room.onEnterLayer("triggerPanel4").subscribe(() => {
+        triggerpanel4 = WA.ui.openPopup(
+            "panel4",
+            'Panel 4 ->',
+            []
+        )
+    });
+    // Close the popup when we leave the zone.
+    WA.room.onLeaveLayer("triggerPanel4").subscribe(() => {
+        triggerpanel4.close();
+    })
+    
+    //panel 3
+    let triggerpanel3: Popup;
+    WA.room.onEnterLayer("triggerPanel3").subscribe(() => {
+        triggerpanel3 = WA.ui.openPopup(
+            "panel3",
+            '<- Handel im Mittelalter \n Kampf im Mittelalter ->',
+            []
+        )
+    });
+    // Close the popup when we leave the zone.
+    WA.room.onLeaveLayer("triggerPanel3").subscribe(() => {
+        triggerpanel3.close();
+    })
+
+        
+
+    /**
+         * Dialogue code for corridor.tmj
+         */
+    let corridorDialogue: Popup;
+    // Open the popup when we enter a given zone
+    WA.room.onEnterLayer("dialogueEntering").subscribe(() => {
+        corridorDialogue = WA.ui.openPopup(
+            "corridor", 
+            'uh...sollte ich hier sein? \n Wohin führt diese Treppe da hinten nur?',
+            []
+        );
+    });
+    // Close the popup when we leave the zone.
+    WA.room.onLeaveLayer("dialogueEntering").subscribe(() => {
+        corridorDialogue.close();
+    })
+      
+
+  /**
+     * Dialogue code for dungeon.tmj
+     */
+    let dungeonDialogue: Popup;
+    // Open the popup when we enter a given zone
+    WA.room.onEnterLayer("dialogueEscape").subscribe(() => {
+        dungeonDialogue = WA.ui.openPopup(
+            "dungeonPopUp", 
+            'Oh nee! Wo bin ich denn hier gelandet? \n Und wie komme ich hier wieder raus? \n Da vorne ist ein Licht...',
+            []
+        );
+    });
+    // Close the popup when we leave the zone.
+    WA.room.onLeaveLayer("dialogueEscape").subscribe(() => {
+        dungeonDialogue.close();
+    })
     
 
 }).catch(e => console.error(e));

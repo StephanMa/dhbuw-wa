@@ -25,7 +25,7 @@
                         {
                          "name":"playAudio",
                          "type":"string",
-                         "value":".\/birds.ogg"
+                         "value":"public\/birds.ogg"
                         }],
                  "rotation":0,
                  "type":"area",
@@ -53,7 +53,7 @@
                         {
                          "name":"playAudio",
                          "type":"string",
-                         "value":".\/fire.ogg"
+                         "value":"public\/fire.ogg"
                         }],
                  "rotation":0,
                  "type":"area",
@@ -564,7 +564,7 @@
                 }],
          "opacity":1,
          "type":"objectgroup",
-         "visible":true,
+         "visible":false,
          "x":0,
          "y":0
         }, 
@@ -874,12 +874,17 @@
         {
          "name":"mapCopyright",
          "type":"string",
-         "value":"Credits: liversausagechimp \nLicense: CC-BY-SA "
+         "value":"Credits: Workadventure (https:\/\/WorkAdventu.re) \n @liversausagechimp \n License: CC-BY-SA 3.0 (http:\/\/creativecommons.org\/licenses\/by-sa\/3.0\/)"
         }, 
         {
          "name":"mapDescription",
          "type":"string",
          "value":"The entrance of the conference map"
+        }, 
+        {
+         "name":"mapImage",
+         "type":"string",
+         "value":"entrance.png"
         }, 
         {
          "name":"mapName",
@@ -889,7 +894,7 @@
         {
          "name":"script",
          "type":"string",
-         "value":".\/src\/main.ts"
+         "value":"src\/main.ts"
         }],
  "renderorder":"right-down",
  "tiledversion":"git",

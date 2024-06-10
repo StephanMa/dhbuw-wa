@@ -25,7 +25,7 @@
                         {
                          "name":"playAudio",
                          "type":"string",
-                         "value":".\/courtroom.ogg"
+                         "value":"public\/courtroom.ogg"
                         }],
                  "rotation":0,
                  "type":"area",
@@ -36,7 +36,7 @@
                 }],
          "opacity":1,
          "type":"objectgroup",
-         "visible":true,
+         "visible":false,
          "x":0,
          "y":0
         }, 
@@ -97,6 +97,22 @@
          "height":5,
          "id":5,
          "name":"collisions",
+         "opacity":1,
+         "type":"tilelayer",
+         "visible":true,
+         "width":20,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "data":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 1292, 1292, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 1292, 1292, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 1292, 1292, 1292, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+         "height":5,
+         "id":16,
+         "name":"dialogueEntering",
          "opacity":1,
          "type":"tilelayer",
          "visible":true,
@@ -192,16 +208,53 @@
          "draworder":"topdown",
          "id":15,
          "name":"floorLayer",
-         "objects":[],
+         "objects":[
+                {
+                 "height":94,
+                 "id":3,
+                 "name":"corridor",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":204.666666666667,
+                 "x":149.333333333333,
+                 "y":31.3333333333333
+                }],
          "opacity":1,
          "type":"objectgroup",
-         "visible":true,
+         "visible":false,
          "x":0,
          "y":0
         }],
- "nextlayerid":16,
- "nextobjectid":3,
+ "nextlayerid":17,
+ "nextobjectid":4,
  "orientation":"orthogonal",
+ "properties":[
+        {
+         "name":"mapCopyright",
+         "type":"string",
+         "value":"Credits: Workadventure (https:\/\/WorkAdventu.re) \n @liversausagechimp \n License: CC-BY-SA 3.0 (http:\/\/creativecommons.org\/licenses\/by-sa\/3.0\/)"
+        }, 
+        {
+         "name":"mapDescription",
+         "type":"string",
+         "value":"a mysterious corridor with unsteady floor. Cautious!"
+        }, 
+        {
+         "name":"mapImage",
+         "type":"string",
+         "value":"corridor.png"
+        }, 
+        {
+         "name":"mapName",
+         "type":"string",
+         "value":"Corridor"
+        }, 
+        {
+         "name":"script",
+         "type":"string",
+         "value":"src\/main.ts"
+        }],
  "renderorder":"right-down",
  "tiledversion":"git",
  "tileheight":32,
